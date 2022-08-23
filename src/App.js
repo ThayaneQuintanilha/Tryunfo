@@ -13,8 +13,8 @@ class App extends React.Component {
     cardTrunfo: false,
     hasTrunfo: false,
     isSaveButtonDisabled: false,
-    onInputChange: func,
-    onSaveButtonClick: func,
+    onInputChange: false,
+    onSaveButtonClick: false,
   };
 
   render() {
