@@ -14,12 +14,6 @@ export default class Card extends Component {
       cardTrunfo,
     } = this.props;
 
-    const trunfos = (trunfo) => {
-      if (trunfo === true) {
-        return cardTrunfo && <p data-testid="trunfo-card">Super Trunfo</p>;
-      }
-    };
-
     return (
       <div>
         <h2 data-testid="name-card">{cardName}</h2>
@@ -29,7 +23,7 @@ export default class Card extends Component {
         <p data-testid="attr2-card">{cardAttr2}</p>
         <p data-testid="attr3-card">{cardAttr3}</p>
         <p data-testid="rare-card">{cardRare}</p>
-        {trunfos(cardTrunfo)}
+        {cardTrunfo && <p data-testid="trunfo-card">Super Trunfo</p>}
       </div>
     );
   }

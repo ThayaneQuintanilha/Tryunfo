@@ -49,8 +49,7 @@ class App extends React.Component {
       cardAttr3: 0,
       cardImage: '',
       cardRare: 'normal',
-      cardTrunfo: false,
-      hasTrunfo: false,
+      hasTrunfo: true,
       isSaveButtonDisabled: true });
   };
 
