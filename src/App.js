@@ -58,6 +58,13 @@ class App extends React.Component {
       }));
   };
 
+  removeCards = ({ target }) => {
+    this.setState({
+      hasTrunfo: false,
+    });
+    target.parentNode.remove();
+  };
+
   render() {
     const {
       cardName,
@@ -113,6 +120,13 @@ class App extends React.Component {
                 cardRare={ cards.cardRare }
                 cardTrunfo={ cards.cardTrunfo }
               />
+              <button
+                type="button"
+                data-testid="delete-button"
+                onClick={ this.removeCards }
+              >
+                Excluir
+              </button>
             </li>
           ))}
         </ul>
